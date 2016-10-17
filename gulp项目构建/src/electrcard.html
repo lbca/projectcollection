@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/housekeeper.css?v=88888888" /> 
+    </head> 
+    <body id="electrCard">
+        <div class="header">
+            <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a>
+            <!-- 标题 -->
+            <span class="title">电子保修卡</span>
+            <span class="btn" id="bxkxz">保修须知</span>
+        </div>
+        <div class="container">
+            <div class="topbg">
+                <div class="txt-ct dn" id="have">
+                    <span class="txt-big"><span id="dotw">0</span>天</span>
+                    <span class="txt-small">主体保修天数</span>
+                </div>
+                <div class="txt-ct-tuwen dn" id="nohave" >
+                    <span class="txt-big i2"><i class="i i-bao4"></i>已过保</span>
+                    <div class="txt-small">您的产品已过保，请注意保养设备</div>
+                </div>
+                <div class="txt-ct-tuwen dn" id="unknow">
+                    <span class="txt-big i3"><i class="i i-shijian"></i>暂无时间</span>
+                    <div class="txt-small">管家未能获取到保修时间</div>
+                </div>
+                <div class="gray-layer" id="gdna"></div>
+            </div>
+            <div id="wcbic"></div>
+            <div class="tip">厂家客服电话：<a class="cl-yl" id="mfpn" href="javascript:;">-</a><a class="link" href="javascript:util.href('warranty.html');">保修条款</a></div>
+        </div>
+
+        <div class="footer dn">
+            <span class="btn btn-footer" id="save">保存</span>
+        </div>
+
+        <div class="dialog dn">
+            <div class="tablecell">
+                <div class="dialog-context no-txtidt">
+                    <div class="ttl">保修卡须知<span class="opctbig" id="dialogClose"><i class="i i-delete2"></i></span></div>
+                    <div class="txt">
+                        <span class="clred">保修卡展示</span>
+                        仅展示用户使用会员卡在国美电器门店购买电子类商品保修信息，如展示信息有误请及时联系会员卡所属门店。
+                        <span class="clred">保修时间</span>
+                        根据用户购买商品时间及产品保修期限计算展示当前剩余保修时间，仅展示商品主设备保修时间，不展示商品延保、配件保修时间，目前保修时间主要以用户购买时间与相关类型商品标准保修期计算剩余保修时间，如出现保修时间错误，请以商品实际保修期为主。
+                        <span class="clred">保修效用</span>
+                        国美管家保修卡信息仅作为帮助用户实时提醒保修剩余时间及相关发票、商品条码管理展示，不作为最终保修凭证，最终解释权归产品厂家所有。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/electrcard.js?v=88888888"></script>
+        <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/wx.config.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                // 
+                var electrCard = new ElectrCard({sel: '#electrCard'});
+                electrCard.init();
+
+                    // 微信js
+                var wc = new WxConfig({
+                    cfg: {
+                        //'debug': true,
+                        'jsApiList': ['scanQRCode']
+                    },
+                    // 验证成功
+                    ready: function() {
+                        // 微信加载成功
+                        electrCard.options.wcSuccess = true;
+                    },
+                    // 验证失败
+                    error: function() {
+                        /*// 提示用户
+                        util.alert('页面加载遇到问题，将重新尝试。', {
+                            justOk: false,
+                            defBtnIndex: 0,
+                            okFn: function() {
+                                // 重新加载页面
+                                window.location.reload();
+                            }
+                        });*/
+                    }
+                });
+                // 初始化
+                wc.init();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/> 
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/instruction.css?v=88888888" /> 
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/instructbase.css?v=88888888" /> 
+		<!-- <link rel="stylesheet" href="css/base.css"> -->
+		<!-- <link rel="stylesheet" href="css/instruction.css"> -->
+		<!-- <link rel="stylesheet" href="css/instructbase.css"> -->
+</head>
+<body id="instruction">
+	<div class="header">
+		<a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a>
+		<!-- 标题 -->
+		<span class="title" id="title"></span> 
+		<span class="mainCatalog" id="mainCatalog"></span>
+	</div>
+	<div class="container"></div>
+	<div class="footer">
+		<span id="prev" class="btn  btn-linear"></span> <span id="prevCatalog"
+			class="btn  btn-linear">上级目录</span> <span id="next"
+			class="btn  btn-linear"></span>
+	</div>
+    <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+    <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+    <script src="//js.gomegj.com/guanjia/v1/instruction.js?v=88888888"></script>
+    <script src="//js.gomegj.com/guanjia/v1/iscroll-zoom.js?v=88888888"></script>
+	<!-- <script src="js/instruction.js"></script> -->
+	<!--<script src="js/iscroll.js"></script>-->
+	<!-- <script src="js/iscroll-zoom.js"></script> -->
+	<script>
+		$(document).ready(function() {
+			var instruction = new Introduction({
+				sel : '#instruction',
+				link:'instruction'
+			});
+			instruction.init();
+		});
+	</script>
+
+</body>
+</html>

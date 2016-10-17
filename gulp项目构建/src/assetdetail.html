@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/housekeeper.css?v=88888888" /> 
+    </head> 
+    <body id="assetDetail">
+        <div class="header">
+            <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a>
+            <!-- 标题 -->
+            <span class="title" id="asname">资产名称</span>
+        </div>
+        <div class="container">
+            <!-- <img src="http://img4.gomein.net.cn/image/bbcimg/production_image/nimg/20150604/12/8006319229/117199184_100.jpg" alt=""> -->
+            <!-- 商品图片 -->
+            <img class="assimg js-dlgimg" id="asimgu">
+            <!-- <input class="upldastimg" id="upldAstImg" type="file" accept="image/*;capture=camera"> -->
+            <ul class="list-text icon" id="list">
+                <li class="dn" id="menu1">
+                    <a id="asewcu" href="javascript:;">
+                        <i class="text-icon i i-warranty-card"></i>
+                        <p>电子保修卡</p>
+                        <p class="text-smallgray">实时管理产品保修信息及期限</p>
+                    </a>
+                </li>
+                <li class="dn" id="menu2">
+                    <a id="aspmu" href="javascript:;">
+                        <i class="text-icon i i-description"></i>
+                        <p>电子说明书</p>
+                        <p class="text-smallgray">快速了解产品的使用方法</p>
+                    </a>
+                </li>
+                <!-- <li class="dn" id="menu3">
+                    <i class="text-icon i i-addbig"></i>
+                    <p>设备发票</p>
+                    <p class="text-smallgray">上传设备发票</p>
+                    <div class="img-small-block" id="aseilist">
+                        <span class="dotted-block" id="uploadasei">
+                            <i class="i i-add">+</i>
+                            <span class="text-small">上传图片</span>
+                            <input class="upimg" id="uploadaseiBtn" type="file" accept="image/*;capture=camera">
+                        </span>
+                    </div>
+                </li> -->
+                <li class="dn" id="menu4">
+                    <a href="javascript:util.href('assetservicerecord.html');">
+                        <i class="text-icon i i-service-record"></i>
+                        <p>服务记录</p>
+                        <p class="text-smallgray">管理您的产品往期服务记录</p>
+                    </a>
+                </li>
+            </ul>
+
+            <nav class="nav-blk">
+                <div class="tip">服务类型</div>
+                <div class="nav-a-blk" id="serviceType">
+                    <a href="javascript:;"><i class="i i-maintenance1" disabled></i>维修</a>
+                    <a href="javascript:;"><i class="i i-appointment1" disabled></i>回收</a>
+                    <a href="javascript:;"><i class="i i-cleaning1" disabled></i>清洗保养</a>
+                    <a href="javascript:;"><i class="i i-bao" disabled></i>延保</a>
+                    <a href="javascript:;"><i class="i i-installation1" disabled></i>安装</a>
+                    <a href="javascript:;"><i class="i i-light" disabled></i>购买配件</a>
+                </div>
+            </nav>
+        </div>
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/assetdetail.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/iscroll-zoom.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                var assetDetail = new AssetDetail({sel: '#assetDetail'});
+                assetDetail.init();
+            });
+        </script>
+    </body>
+</html>

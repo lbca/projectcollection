@@ -1,0 +1,1033 @@
+@charset "utf-8";
+/* pagecommon */
+
+#assetType .list-text .i-gt,
+#assetList .list-text .i-gt {
+    margin-top: -.06rem;
+    top: 50%;
+    right: .1rem;
+}
+#assetType .list-text .text-icon,
+#assetList .list-text .text-icon {
+    width: .6rem;
+    height: .6rem;
+    margin-top: -.3rem;
+    /* outline: 1px solid red; */
+}
+
+#accSearchInput .list-labelvalue label,
+#accInput .list-labelvalue label,
+#accSearch .list-labelvalue label,
+#setAddress .list-labelvalue label,
+#certificateDetail .list-labelvalue label {
+    color: #666;
+    font-size: .14rem;
+}
+#accSearchInput .list-labelvalue .value,
+#accInput .list-labelvalue .value,
+#accSearch .list-labelvalue .value,
+#setAddress .list-labelvalue .value,
+#certificateDetail .list-labelvalue .value {
+    color: #333;
+    font-size: .14rem;
+    padding: 0;
+}
+#accSearchInput input::-webkit-input-placeholder,
+#accInput input::-webkit-input-placeholder,
+#accSearch input::-webkit-input-placeholder,
+#setAddress input::-webkit-input-placeholder,
+#certificateDetail input::-webkit-input-placeholder,
+#loginput .list-labelvalue input::-webkit-input-placeholder {
+    color: #999;
+    font-size: .12rem;
+}
+
+#accSearchInput .list-labelvalue,
+#accInput .list-labelvalue,
+#accSearch .list-labelvalue {
+    font-size: .14rem;
+}
+#accSearchInput .list-labelvalue:not(:last-of-type),
+#accInput .list-labelvalue:not(:last-of-type),
+#accSearch .list-labelvalue:not(:last-of-type) {
+    margin-bottom: .05rem;
+}
+#accSearchInput .list-labelvalue input,
+#accInput .list-labelvalue input,
+#accSearch .list-labelvalue input {
+    width: 50%;
+}
+#accSearchInput .list-labelvalue .btn,
+#accInput .list-labelvalue .btn,
+#accSearch .list-labelvalue .btn {
+    float: right;
+    margin-top: .08rem;
+    margin-left: .1rem;   
+}
+#accSearchInput .list-labelvalue .maxwidth,
+#accInput .list-labelvalue .maxwidth,
+#accSearch .list-labelvalue .maxwidth {
+    width: 80%;
+}
+#accSearchInput .tip,
+#accInput .tip,
+#accSearch .tip {
+    text-align: left;
+    padding-bottom: 0;
+}
+#accSearchInput .link-block,
+#accInput .link-block,
+#accSearch .link-block {
+    margin-top: .08rem;
+    padding-left: .36rem;
+    position: relative;
+}
+#accSearchInput .i-quangou,
+#accInput .i-quangou,
+#accSearch .i-quangou {
+    top: 0;
+    left: .11rem;
+}
+#accSearchInput .btn-footer,
+#accInput .btn-footer,
+#accSearch .btn-footer {
+    margin-top: .3rem;
+}
+#accInput .list-labelvalue .btn,
+#accSearch .list-labelvalue .btn {
+    text-align: center;
+    width: .75rem;
+    padding: .06rem 0;
+}
+/*page*/
+#set {
+    background-color: #f5f5f5;
+}
+#set .userpic {
+    position: absolute;
+    right: .28rem;
+    top: .1rem;
+}
+#set .list-labelvalue .value {
+    width: 60%;
+    text-align: right;
+}
+#set .list-labelvalue .maxlength {
+    width: 75%;
+}
+#set .list-labelvalue .i1 {
+    line-height: .68rem;
+}
+#set .list-labelvalue .i1 .i-gt {
+    top: .3rem;
+}
+#set .list-labelvalue:not(:last-of-type) {
+    margin-bottom: .1rem;
+}
+#set .tip {
+    font-size: .12rem;
+    padding-left: .33rem;
+    position: relative;
+}
+#set .tip .i-lock {
+    top: .07rem;
+    left: .13rem;
+}
+#setPhoneInput .input .left-label {
+    text-indent: .12rem;
+    width: .98rem;
+    line-height: .47rem;
+    border-right: 1px solid #e3e3e3;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#setPhoneInput .input input {
+    padding-left: 1.1rem;
+} 
+#setPhoneVcode .input input {
+    padding-right: 1.07rem;
+} 
+#setPhoneVcode .input .right-label {
+    color: #c00;
+    width: 1.06rem;
+    line-height: .47rem;
+    border-left: 1px solid #e3e3e3;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#setAddress .list-labelvalue {
+    font-size: .14rem;
+}
+#setAddress .list-labelvalue label,
+#setAddress .list-labelvalue .value {
+    padding-right: .18rem;
+}
+#setAddress .list-labelvalue .i-lock {
+    right: -.09rem;
+}
+#setAddress .cgray {
+    color: #666;
+}
+/* #setAddress .list-labelvalue[modify] {
+}
+#setAddress label {
+    color: #666;
+}
+#setAddress .value,
+#setAddress input {
+    color: #333;
+} */
+#setSex .list-textsingle {
+    border-bottom: 1px solid rgba(227, 227, 227, 1);
+}
+#setSignature .text-small {
+    color: #999;
+    font-size: .12rem;
+    position: absolute;
+    right: .12rem;
+    bottom: .12rem;
+}
+#addressList .list-text li {
+    padding-bottom: .16rem;
+}
+#addressList .text-detail {
+    width: 83%;
+    line-height: .16rem;
+    max-height: .32rem;
+    padding-top: .08rem;
+    overflow: hidden;
+}
+#addressList .setdefault {
+    color: #ffb400;
+    font-size: .12rem;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: .08rem;
+}
+#addressList .setdefault.red {
+    color: #c00;
+}
+#addressList .setdefault.gray {
+    color: #999;
+}
+#accList .list-text {
+    color: #fff;
+    background-color: transparent;
+    border-style: none;
+}
+#accList .list-text li {
+    padding: .11rem 0 .1rem .6rem;
+    margin-top: .15rem;
+    background: -webkit-linear-gradient(90deg, #e75b64, #e9507c);
+    background:         linear-gradient(90deg, #e75b64, #e9507c);
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+#accList .accicon {
+    width: .36rem;
+    height: .36rem;
+    top: .15rem;
+    left: .15rem;
+}
+#accList .acctype {
+    line-height: .21rem;
+}
+#accList .acccode {
+    font-size: .13rem;
+    line-height: .26rem;
+}
+#accList .accnum {
+    font-size: .18rem;
+    line-height: .44rem;
+}
+#accList .tip  {
+    width: 100%;
+    background-color: #f5f5f5;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#accList .btn-del {
+    top: -.18rem;
+}
+#accFindpwdForphone .btn-footer .dib {
+    color: #fff;
+    width: 1.55rem;
+    text-align: right;
+}
+#accFindpwdForphone .btn-footer .i-phone {
+    margin-top: -.13rem;
+    top: 50%;
+    left: 0;
+}
+#assetType .list-text {
+    color: #333;
+    border-top: 1px solid rgba(227, 227, 227, .4);
+}
+#assetType .list-text li {
+    min-height: .8rem;
+    padding: .14rem .5rem .1rem .71rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#assetType .list-text .text-detail {
+    color: #999;
+    font-size: .12rem;
+    line-height: .18rem;
+    margin-top: .03rem;
+}
+#assetList .dn {
+    display: none;
+}
+#assetList .list-text {
+    border: 1px solid rgba(224, 224, 224, .5);
+    position: relative;
+}
+#assetList .list-text .text-icon {
+    margin: 0;
+    top: .14rem;
+}
+#assetList .list-text .txt-ipt {
+    color: #333;
+    font-size: .12rem;
+    text-indent: .05rem;
+    width: 100%;
+    height: .26rem;
+    border: 1px solid #c00;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#assetList .txt-ipt[readonly] {
+    text-indent: 0;
+    border-color: transparent;
+}
+#assetList .smlbtn-blk .btn {
+    font-size: .1rem;
+    padding: .01rem .06rem;
+}
+#assetList .list-text .txt-blk {
+    color: #666;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: .03rem;   
+}
+#assetList .list-text .btn-red {
+    padding: .06rem .08rem;
+    position: absolute;
+    top: .12rem;
+    right: 0;
+}
+#assetList .list-text:not(:first-of-type) {
+    margin-top: .1rem;
+}
+#assetList .list-text li:not(:last-of-type) {
+    font-size: .12rem;
+    line-height: .18rem;
+    min-height: .89rem;
+    padding: .12rem 0 .03rem .73rem;
+}
+#assetList .list-text li:last-of-type {
+    text-align: right;
+    line-height: .44rem;
+    padding: 0;
+}
+#assetList .list-text li:last-of-type .btn {
+    min-width: .77rem;
+    text-align: center;
+    margin-left: .1rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#assetDetail .assimg {
+    width: 100%;
+    height: 2.1rem;
+    display: block;
+    margin: 0 auto;
+}
+#assetDetail .upldastimg {
+    width: 100%;
+    height: 2.1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+#assetDetail .img-small-block {
+    height: .5rem;
+    position: absolute;
+    right: 0;
+    top: .07rem;
+}
+#assetDetail .img-small-block .img-block {
+    width: .43rem;
+    height: .45rem;
+    display: inline-block;
+    border: 1px dotted #e0e0e0;
+    margin-right: .05rem;
+    position: relative;
+}
+#assetDetail .img-small-block img {
+    width: 100%;
+    height: 100%;
+}
+#assetDetail .img-small-block .btn-del {
+    width: .3rem;
+    height: .3rem;
+    top: -.13rem;
+    right: -.13rem;
+}
+#assetDetail .img-small-block .i-delete1 {
+    top: -.06rem;
+    right: -.06rem;
+}
+#assetDetail .dotted-block {
+    color: #999;
+    font-size: .1rem;
+    width: .43rem;
+    height: .43rem;
+    display: inline-block;
+    position: relative;
+}
+#assetDetail .dotted-block .upimg {
+    width: .43rem;
+    height: .43rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    opacity: 0;
+}
+#assetDetail .dotted-block .text-small {
+    font-size: .12rem;
+    width: .5rem;
+    display: block;
+    position: absolute;
+    top: .22rem;
+    left: -.03rem;
+    -webkit-transform: scale(.83);
+            transform: scale(.83);
+    z-index: 20;
+}
+/* #assetDetail .dotted-block .i-add {
+    color: #e0e0e0;
+    font-size: .3rem;
+    top: .03rem;
+    left: .1rem;
+    z-index: 10;
+} */
+#assetDetail .nav-blk {
+    margin-top: .1rem;
+    padding: 0 .12rem;
+    background-color: #fff;
+    border: 1px solid rgba(227, 227, 227, .4);
+}
+#assetDetail .nav-blk .tip {
+    color: #333;
+    font-size: .16rem;
+    line-height: .44rem;
+    padding: 0;
+    border-bottom: 1px solid rgba(227, 227, 227, .4);
+}
+#assetDetail .nav-a-blk {
+    padding-bottom: .2rem;
+    overflow: auto;
+}
+#assetDetail .nav-a-blk a {
+    color: #666;
+    text-indent: 11.2%;
+    width: 33%;
+    line-height: .55rem;
+    float: left;
+    position: relative;
+    margin-bottom: .07rem;
+}
+#assetDetail .nav-a-blk .i {    
+    left: 5%;
+    top: .16rem;
+}
+#assetServiceRecord ul:not(:first-of-type) {
+    margin-top: .1rem;
+}
+#assetServiceRecord .list-text.icon li {
+    padding-left: .7rem;
+}
+#assetServiceRecord .list-text .text-icon {
+    width: .6rem;
+    height: .6rem;
+    top: 50%;
+    margin-top: -.3rem;
+}
+#assetServiceRecord .list-text p {
+    color: #333;
+}
+#assetServiceRecord .list-text .text-smallgray {
+    color: #999;
+    line-height: .18rem;
+    padding: .02rem 0;
+}
+#assetServiceRecord .list-text .txt-tprt {
+    color: #999;
+    font-size: .1rem;
+    position: absolute;
+    top: .11rem;
+    right: 0;
+}
+#login .container {
+    width: 100%;
+    height: 100%;
+    position: static;
+}
+#loginput .list-labelvalue {
+    margin-top: .15rem;
+    border-style: none;
+}
+#loginput .list-labelvalue label {
+    color: #666;
+    font-size: .14rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#loginput .list-labelvalue input {
+    font-size: .14rem;
+    width: 100%;
+    padding-left: .4rem;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#loginput .btn-footer {
+    font-size: .18rem;
+    margin-top: .3rem;
+    background-color: #e0e0e0;
+}
+#loginput .btn-footer.act {
+    background-color: #c00;
+}
+#setPwd .list-labelvalue label,
+#setPwdmod .list-labelvalue label {
+    color: #666;
+    font-size: .14rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#setPwd .list-labelvalue input,
+#setPwdmod .list-labelvalue input {
+    color: #666;
+    font-size: .12rem;
+    width: 100%;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#setPwd .i1 input {
+    padding-left: .69rem;
+}
+#setPwd .i2 input {
+    padding-left: .96rem;
+}
+#setPwdmod .i1 input,
+#setPwdmod .i2 input,
+#setPwdmod .i3 input {
+    padding-left: .69rem;
+}
+#setPwdmod .i4 input {
+    padding-left: .52rem;
+    padding-right: .71rem;
+}
+#setPwdmod .i4 img {
+    width: .68rem;
+    height: .28rem;
+    border: 1px solid rgba(123, 139, 148, .1);
+    position: absolute;
+    top: .07rem;
+    right: 0;
+}
+#certificateList .list-text {
+    border-bottom: 1px solid rgba(227, 227, 227, .4);
+}    
+#certificateList .pl5 {
+    padding-left: .05rem;
+}
+#certificateList .list-text .text-icon {
+    width: .36rem;
+    height: .36rem;
+    margin-top: 0;
+    top: .15rem;
+}
+#certificateList .list-text li {
+    padding-top: .13rem;
+    padding-left: .45rem;
+    padding-bottom: .1rem;
+}
+#certificateList .list-text .text-detail {
+    line-height: 1.5;
+}
+#certificateList .list-text .text-detail .text-smallgray {
+    font-size: .14rem;
+    width: 30%;
+}
+#certificateList .list-text .text-rt {
+    text-align: right;
+    width: 70%;
+    float: right;
+}
+#certificateList .text-detail span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+}
+#certificateList .text-detail {
+    overflow: auto;
+}
+#certificateList .text-detail .fl {
+    width: 30%;
+} 
+#certificateList .text-detail .fr {
+    width: 70%;
+    text-align: right;
+}
+#myShare .content {
+    background-color: #fff;
+}
+#myShare .topbg {
+    height: 1.27rem;
+    background-color: #c00;
+    border-bottom: 1px solid rgba(227, 227, 227, .4);
+}
+#myShare .userpic-blk {
+    text-align: center;
+    width: .83rem;
+    height: .83rem;
+    background-color: #fff;
+    margin-left: -.42rem;
+    position: absolute;
+    top: .81rem;
+    left: 50%;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+}
+#myShare .userpic {
+    width: .75rem;
+    height: .75rem;
+    margin-top: .04rem;
+}
+#myShare .cttxt {
+    color: #333;
+    font-size: .14rem;
+    text-align: center;
+    line-height: 1;
+    margin-top: .44rem;
+}
+#myShare .list-text {
+    font-size: .12rem;
+    margin-top: .32rem;
+}
+#myShare .list-text li {
+    padding-top: .07rem;
+}
+#myShare .list-text .text-blk {
+    line-height: .18rem;
+}
+#myShare .list-text .text-blk span {
+    font-size: .18rem;
+    display: inline-block;
+}
+#myShare .i-gt {
+    top: .23rem;
+    right: .02rem;
+}
+#myShare .btn-footer {
+    margin-top: .29rem;
+}
+#invite .container {
+    background-color: #f5f5f5;
+}
+#invite .content {
+    background-color: #fff;
+}
+#invite .center-link {
+    line-height: .66rem;
+}
+#invite .bgimg {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+#invite .tip {
+    text-align: center;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+#invite .rdicblk {
+    margin-top: .24rem;
+}
+#invite .rdic {
+    color: #fff;
+    font-size: .19rem;
+    line-height: .32rem;
+    padding-left: .14rem;
+    padding-right: .36rem;
+    background-color: #c00;
+    display: inline-block;
+    position: relative;
+}
+#invite .i-sharearrow {
+    right: .12rem;
+    top: .06rem;
+}
+#invite .rdic:before,
+#invite .rdic:after {
+    content: ' ';
+    height: 1px;
+    width: .57rem;
+    background-color: #c00;
+    display: block;
+    position: absolute;
+    top: 50%;
+}
+#invite .rdic:before {
+    left: -.56rem;
+}
+#invite .rdic:after {
+    right: -.56rem;
+}
+#invite .bgblk {
+    color: #333;
+    font-size: .15rem;
+    margin-top: .08rem;
+}
+#invite .smgay {
+    color: #666;
+    margin-top: .05rem;
+}
+#invite .smblk {
+    color: #333;
+    font-weight: 700;
+}
+#invite .img-blk {
+    width: 2.17rem;
+    height: .93rem;
+    margin: .3rem auto .18rem;
+    position: relative;
+}
+#invite .img-blk img,
+#invite .img-blk .zhiwen {
+    width: .93rem;
+    height: .93rem;
+    position: absolute;
+}
+#invite .img-blk img {
+    padding-right: 1.25rem;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+#invite .img-blk .zhiwen {
+    background: #ff9e04 url('//img.gomegj.com/guanjia/v1/fingerprint.png') no-repeat center;
+    top: 0;
+    right: 0;
+    -webkit-background-size: 61px 78px;
+            background-size: 61px 78px;
+    z-index: 10;
+}
+#invite .tbnav {
+    font-size: .15rem;
+    text-align: center;
+    margin: 0 .12rem;
+    padding-top: .25rem;
+    overflow: auto;
+}
+#invite .tbnav a {
+    color: #333;
+}
+#invite .tbnav dl {
+    width: 25%;
+    float: left;
+}
+#invite .tbnav dl img {
+    width: 100%;
+    height: 100%;
+}
+#invite .tbnav dt {
+    width: .58rem;
+    height: .58rem;
+    display: inline-block;
+}
+#invite .tbnav dd {
+    line-height: .33rem;
+}
+#invite .footblk {
+    border-top: 1px solid rgba(227, 227, 227, .4);
+    background-color: #f5f5f5;
+    margin-top: .2rem;
+}
+#accSm .list-text {
+    color: #fff;
+    line-height: 1.2;
+    background-color: transparent;
+    border-style: none;
+    margin-top: .15rem;
+}
+#accSm .list-text li {
+    padding: .39rem 0 .42rem .75rem;
+    background: #e75b64 url('//img.gomegj.com/guanjia/v1/cardbeijing.png') no-repeat center;
+    -webkit-background-size: cover;
+            background-size: cover;   
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+#accSm .accicon {
+    width: .36rem;
+    height: .36rem;
+    top: .4rem;
+    left: .18rem;
+}
+#accSm .acctype {
+    font-size: .24rem;
+}
+#accSm .acccode {
+    font-size: .15rem;
+    margin-top: .05rem;
+}
+#accSm .accnum {
+    font-size: .2rem;
+    margin-top: .07rem;
+}
+#accSm .tip  {
+    color: #333;
+    font-size: .14rem;
+    line-height: .22rem;
+    margin-top: .14rem;
+}
+#accSm .txtred {
+    color: #c00;
+}
+#accSm .ipgrp {
+    font-size: .14rem;
+    line-height: .43rem;
+    border: 1px solid rgba(200, 200, 200, .1);
+    background-color: #e7e7e7;
+    margin: 0 .12rem;
+    padding-left: .11rem;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+#accSm .ipgrp:not(.i1) {
+    margin-top: .1rem;
+}
+#accSm .ipgrp input {
+    font-size: .14rem;
+    width: 65%;
+    background-color: transparent;
+    border-style: none;
+}
+#accSm .ipgrp .conbtn {
+    color: #fff;
+    text-align: center;
+    width: .98rem;
+    line-height: .43rem;
+    background-color: #ffaf05;
+    display: inline-block;
+    float: right;
+    -webkit-border-radius: 0 3px 3px 0;
+            border-radius: 0 3px 3px 0;
+}
+#accSm .btn-footer {
+    margin-top: .3rem;
+}
+#accSmFail .container {
+    background: transparent url('//img.gomegj.com/guanjia/v1/bg.jpg') no-repeat center;
+    -webkit-background-size: cover;
+            background-size: cover;
+}
+#accSmFail .ta-ct img {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .12rem;
+    background-color: #fff;
+}
+#accSmFail .tuwen .tu {
+    padding-top: .44rem;
+    padding-bottom: .14rem;
+}
+#accSmFail .tuwen .wen {
+    color: #000;
+    font-size: .24rem;
+}
+#accSmFail .tuwen .tip {
+    color: #666;
+}
+#accSmFail .ta-ct {
+    padding-top: .25rem;
+}
+#accSmFail .chatitem {
+    padding-top: .56rem;
+}
+#accSmFail .chatitem .chattxt:before {
+    background-color: transparent;
+    background-image: url('//img.gomegj.com/guanjia/v1/triangle1.png');
+    left: -.11rem;
+}
+#accSmFail .chatitem .chattxt {
+    border: 1px solid rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, .7);
+}
+#electrCard .container.hsft {
+    bottom: .5rem;
+}
+#electrCard .topbg {
+    color: #fafbd9;
+    text-align: center;
+    height: 1.4rem;
+    border-bottom: 1px solid rgba(227, 227, 227, .4);
+    /* padding-top: .23rem; */
+    background: #c00 url('//img.gomegj.com/guanjia/v1/gome-rd-bg.jpg') no-repeat center;
+    position: relative;
+    -webkit-background-size: contain;
+            background-size: contain;
+}
+#electrCard .topbg .txt-ct {
+    text-indent: .2rem;
+    font-size: .14rem;
+    padding-top: .08rem;
+}
+#electrCard .topbg .txt-ct span {
+    text-indent: 0;
+    display: inline-block;
+}
+#electrCard .topbg .txt-big {
+    font-size: .5rem;
+    position: relative;
+}
+#electrCard .topbg .txt-small {
+    position: relative;
+    top: .03rem;
+    left: .1rem;
+    display: inline-block;
+}
+#electrCard .topbg .gray-layer {
+    font-size: .15rem;
+    width: 100%;
+    padding: .09rem 0;
+    background-color: rgba(0, 0, 0, .2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#electrCard .txt-ct-tuwen {
+    padding-top: .21rem;
+}
+#electrCard .txt-ct-tuwen .txt-big {
+    font-size: .3rem;
+    padding-left: .45rem;
+    display: inline-block;
+}
+#electrCard .txt-ct-tuwen .i3 {
+    padding-left: .5rem;
+}
+#electrCard .txt-ct-tuwen .i {
+    top: 0;
+    left: 0;
+}
+#electrCard .txt-ct-tuwen .i2 .i {
+    top: .01rem;
+}
+#electrCard .txt-ct-tuwen .i3 .i {
+    top: .03rem;
+}
+#electrCard .txt-ct-tuwen .txt-small {
+    font-size: .13rem;
+    padding-top: .06rem;
+    top: 0;
+    left: 0;
+    display: block;
+}
+#electrCard .list-labelvalue {
+    font-size: .14rem;
+}
+#electrCard .list-labelvalue .value {
+    color: #333;
+    text-align: right;
+    width: 75%;
+    padding-right: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#electrCard .list-labelvalue input {
+    padding: 0;
+}
+#electrCard .list-labelvalue .i1 {
+    width: 70%;
+}
+#electrCard .list-labelvalue .i2 {
+    width: 70%;
+}
+#electrCard .list-labelvalue .i3 {
+    width: 50%;
+    padding-right: .4rem;
+}
+#electrCard .list-labelvalue .i4 {
+    width: 44%;
+    padding-right: .4rem;
+}
+#electrCard .list-labelvalue .i5 {
+    width: 54%;
+    padding-right: .4rem;
+}
+#electrCard .list-labelvalue .i6 {
+    width: 65%;
+}
+#electrCard .list-labelvalue .i7 {
+    width: 50%;
+}
+#electrCard .list-labelvalue .i8 {
+    width: 60%;
+}
+#electrCard .list-labelvalue .i10 {
+    width: 70%;
+}
+#electrCard .list-labelvalue .i11 {
+    width: 65%;
+}
+/* #electrCard .list-labelvalue .btn-linear {
+    margin-top: .1rem;
+    margin-left: .05rem;
+    padding: .06rem .1rem;
+    float: right;
+} */
+#electrCard .btn-opct {
+    width: .44rem;
+    height: .44rem;
+    right: -.08rem;
+}
+#electrCard .btn-opct .i {
+    top: .12rem;
+    left: .12rem;
+}
+#electrCard ul:not(:last-of-type) {
+    margin-bottom: .1rem;
+}
+#electrCard .tip {
+    color: #666;
+    padding: .05rem .12rem .28rem;
+}
+#electrCard .tip .cl-yl {
+    color: #ffc000;
+    font-size: .18rem;
+}
+#electrCard .tip .link {
+    color: #007aff;
+    margin-top: .06rem;
+    float: right;
+}
+#electrCard .footer .btn {
+    margin-top: .03rem;
+}

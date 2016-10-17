@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+"use strict";var root=window||{},util=root.util||{},MyShare=function(t){this.options=$.extend({sel:"",hrefParma:util.getHrefParma()},t),this.sel=this.options.sel,this.el=$(this.sel)};$.extend(MyShare.prototype,{init:function(){var t=this;t.load(),t.addEvent()},load:function(){var t=this;t.options.hrefParma;t.getMyShare()},getMyShare:function(){var t=this;util.api({surl:root.BSNS_API_PATH+"myshare",type:"get",success:function(i){var e,r=i.rpco;switch(r){case 200:e=i.body||{},t.renderMyShare(e);break;default:util.tip("查询失败")}}})},renderMyShare:function(t){t.nick&&$("#nick").html(t.nick),t.hporturl&&$("#hporturl").attr("src",t.hporturl),t.accatt&&$("#accatt").html(t.accatt)},creatLink:function(){util.api({surl:root.BSNS_API_PATH+"getk",type:"get",success:function(t){var i,e=t.rpco;switch(e){case 200:i=t.body||{},i.tk&&util.href("invite.html",{tk:i.tk});break;default:util.tip("生成失败")}}})},addEvent:function(){var t=this,i=util.getClick();t.options.hrefParma;t.el.on(i,"#crtlink",function(){t.creatLink()})}});

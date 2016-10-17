@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+"use strict";var root=window||{},util=root.util||{},SetNick=function(t){this.options=$.extend({sel:"",hrefParma:util.getHrefParma(),nickReg:/^[^\s]+$/,msg:{m1:"请输入昵称",m2:"不能包含空格"},requestState:{save:!0}},t),this.sel=this.options.sel,this.el=$(this.sel)};$.extend(SetNick.prototype,{init:function(){var t=this;t.load(),t.addEvent()},load:function(){var t=this,e=t.options.hrefParma;e.nick&&$("#value").val(util.decode(e.nick))},_save:function(t){var e=this;util.api({surl:root.MB_API_PATH+"modudtal",data:{mod:1,nick:t},type:"post",beforeSend:function(){e.options.requestState.save=!1},success:function(t){var e=t.rpco;switch(e){case 200:util.href("set.html");break;default:util.tip("保存失败")}},complete:function(){e.options.requestState.save=!0}})},save:function(){var t=this,e=$("#value").val()||"";return!!t.options.requestState.save&&(e?t.options.nickReg.test(e)?void t._save(e):(util.tip(t.options.msg.m2),!1):(util.tip(t.options.msg.m1),!1))},addEvent:function(){var t=this,e=util.getClick();t.options.hrefParma;t.el.on(e,"#save",function(){t.save()})}});

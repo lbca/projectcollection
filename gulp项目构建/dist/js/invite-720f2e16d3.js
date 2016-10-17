@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+"use strict";var root=window||{},util=root.util||{},Invite=function(t){this.options=$.extend({sel:"",hrefParma:util.getHrefParma(),msg:{m1:"当前链接已失效"}},t),this.sel=this.options.sel,this.el=$(this.sel)};$.extend(Invite.prototype,{init:function(){var t=this;t.load(),t.addEvent()},load:function(){var t=this,i=t.options.hrefParma;i.tk&&t.getEwmAndInfoByTk(i.tk)},getEwmAndInfoByTk:function(t){var i=this;util.api({surl:root.BSNS_API_PATH+"tkewmxx",data:{tk:t},type:"get",success:function(t){var n,r=t.rpco;switch(r){case 200:n=t.body||{},i.renderEwmAndInfo(n);break;case 40001:util.tip(i.options.msg.m1);break;default:util.tip("查询失败")}}})},renderEwmAndInfo:function(t){t.uri&&$("#ewm").attr("src",t.uri),t.nick&&$("#nick").html(t.nick),t.hporturl&&$("#hporturl").attr("src",t.hporturl)},addEvent:function(){var t=this;util.getClick(),t.options.hrefParma}});

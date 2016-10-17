@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+.text{font-size:.15rem;color:#666;padding:0 .19rem;text-align:justify}.img{text-align:center;margin:0 .19rem}.img img{max-width:100%}.img,.table,.text{margin-bottom:.12rem}.table{max-width:100%;overflow:auto;margin-left:-.05rem;margin-right:-.05rem;border:1px solid #e3e3e3}.table table{min-width:100%;margin:0 auto}table .text{width:100%;margin-bottom:0;overflow-wrap:break-word}.table th{background-color:#999;color:#fff;height:.44rem}.table tr{height:.4rem;min-height:.4rem}.table tr:nth-of-type(odd){background-color:#fff}.table tr:nth-of-type(even){background-color:#f5f5f5}.table td{min-height:.22rem;min-width:1.1rem;padding:.09rem .1rem}.table td:not(:last-child){border-right:1px solid #e3e3e3}.table .img,.table .table,.table .text{display:inline-block;margin-bottom:0}.table .text{text-indent:0;padding:0}#content .title{font-weight:700;color:#000}.listtext-fh ul{list-style-type:disc;list-style-position:inside}.listtext-bh ul{list-style-type:decimal;list-style-position:inside}ul li{color:#666;margin-bottom:.12rem}

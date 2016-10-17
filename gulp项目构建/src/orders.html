@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 跳转改这里 -->
+        <!-- <meta http-equiv="refresh" content="0;URL=sod/unpay"> -->
+        <title>国美管家</title>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/orders.css?v=88888888" />
+    </head> 
+    <body>
+    	<div class="header">
+            <!-- 标题 -->
+            <span class="title">我的订单</span>
+        </div>
+        <div class="container">
+        </div>
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script>
+            // 加载提示
+            util.comShow({txt: '正在努力加载中…', icl: 'i-load ro360'});
+
+            // 请求目标页面代码
+            util.api({
+                url: 'sod/home/code',
+                type: 'get',
+                success: function(response) {
+                    var body,
+                        // 目标地址
+                        url;
+                    // 正常
+                    if(response.rpco === 200) {
+                        //
+                        body = response.body || {};
+                        // 业务处理
+                        switch(body.odpgcd) {
+                            // 待支付订单
+                            case 10:
+                                url = '/sod/unpay';
+                                break;
+                            // 服务订单
+                            case 20:
+                                url = '/sod/orderList';
+                                break;
+                            // 实物订单
+                            case 30:
+                                url = 'ordersety.html';
+                                break;
+                            // 虚拟订单
+                            case 40:
+                                url = 'ordersvir.html';
+                                break;
+                            default:
+                                url = '/sod/unpay';
+                        }
+
+                        // 跳转
+                        util.replace(url);
+                    }
+                    // 失败 
+                    else {
+                        util.tip('查询目标订单页失败');
+                    }
+                },
+                error: function(ajax) {
+                    // 登录
+                    if(ajax && ajax.status === 401) {
+                        // 跳转登录页
+                        util.login();
+                    }
+                },
+                complete: function() {
+                    // 移除提示
+                    util.remComShow();
+                }
+            });
+        </script>
+    </body>
+</html>

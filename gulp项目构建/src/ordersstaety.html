@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/orders.css?v=88888888" />
+    </head> 
+    <body id="ordersStaEty">
+        <div class="header">
+            <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a>
+            <!-- 标题 -->
+            <span class="title">订单状态</span>
+        </div>
+        <div class="container">
+            <ul class="list-line">
+                <li class="top">订单号：<span id="otn">-</span></li>
+                <li class="goods-show">
+                    <!-- <img id="gdiul" src="" alt=""> -->
+                    <ul class="list-text icon">
+                        <li>
+                            <img class="text-icon" id="gdiul" src="">
+                            <div class="text-detail wp80" id="gdnm">-</div>
+                            <span class="right-top-txt">￥<span id="gdpr">0.00</span></span>
+                            <span class="right-center-txt">x&nbsp;<span id="gdnu">1</span></span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="list-line mt10">
+                <!-- <li class="top maketime"><i class="i i-clock"></i>预约上门时间：<span class="strong" id="atdvt">-</span></li> -->
+                <li class="flow-block" id="sdfmcl"></li>
+            </ul>
+        </div>
+        <!-- <div class="footer">
+            支付费用：<span class="fcred">asdsadsa</span> 
+            <span class="btn btn-linear">确认</span>
+            <span class="btn btn-linear">评价</span>
+        </div> -->
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/orderscom.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/ordersstaety.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                var ordersCom = new OrdersCom({'cur': '实物单'}),
+                    ordersStaEty = new OrdersStaEty({'sel': '#ordersStaEty'});
+                // 加载...
+                ordersStaEty.init();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+"use strict";var root=window||{},util=root.util||{};root.EMP_FUN=function(){};var WxConfig=function(t){var o={debug:!1,appId:"",timestamp:"",nonceStr:"",signature:"",jsApiList:[]};this.options={},this.options.cfg={},this.options.ready=t.ready||root.EMP_FUN,this.options.error=t.error||root.EMP_FUN,$.extend(this.options.cfg,o,t.cfg,this.getWxConfigParmas())};$.extend(WxConfig.prototype,{init:function(){var t=this;t.load()},load:function(){var t=this;wx.config(t.options.cfg),wx.ready(t.options.ready),wx.error(t.options.error)},getWxConfigParmas:function(){var t=location.href.split("#")[0],o={};return util.api({surl:root.WXCM_API_PATH+"wxpm",data:{curl:t},type:"post",async:!1,success:function(t){var i,r=t.rpco;switch(r){case 200:i=t.body||{},i.appId&&(o.appId=i.appId),i.timestamp&&(o.timestamp=i.timestamp),i.nonceStr&&(o.nonceStr=i.nonceStr),i.signature&&(o.signature=i.signature)}}}),o}});

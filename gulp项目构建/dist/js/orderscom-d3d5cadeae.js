@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+"use strict";var root=window||{},util=root.util||{},OrdersCom=function(t){this.options=$.extend({cur:"",navs:[{name:"待支付",href:"sod/unpay"},{name:"实物单",href:"javascript:util.href('ordersety.html');"},{name:"服务单",href:"sod/orderList"},{name:"虚拟单",href:"javascript:util.href('ordersvir.html');"}]},t),this.sel=this.options.sel,this.el=$(this.sel),this.init()};$.extend(OrdersCom.prototype,{init:function(){var t=this;t.renderNav()},nextNav:function(){var t,r=$("nav:first .cur").index()||0,e=$("nav:first a").length-1;r+=1,e=e<0?0:e,r=r>e?e:r,t=$("nav:first a:eq("+r+")").attr("href"),t&&util.href(t)},renderNav:function(){for(var t=this,r=t.options.navs||[],e=t.options.cur,n="",i=0,s=r.length;i<s;i++)n+="<a "+(r[i].name===e?'class="cur" href="javascript:;"':'href="'+r[i].href+'"')+"><span>"+r[i].name+"</span></a>";$("nav:first").html(n)}});

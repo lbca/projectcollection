@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/housekeeper.css?v=88888888" /> 
+    </head> 
+    <body id="accSm">
+        <div class="header">
+            <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a>
+            <!-- 标题 -->
+            <span class="title">会员卡</span>
+        </div>
+        <div class="container">
+            <ul class="list-text" id="list">
+                <li>
+                    <i class="accicon i " id="acctypetu"></i>
+                    <p class="acctype" id="acctype"></p>
+                    <p class="acccode">会员卡</p>
+                    <p class="accnum" id="acnum"></p>
+                </li>
+            </ul>
+
+            <div class="dn" id="hasCardPhone">
+                <div class="tip">手机号：<span class="txtred" id="cardPhone"></span><br>请核对会员卡是否为您需要绑定会员卡</div>
+                <div class="ipgrp">
+                    <input class="js-mac js-number" type="text" placeholder="请输入您的验证码" maxlength="6">
+                    <label class="conbtn js-vcode">验证码</label>
+                </div>
+                <span class="btn btn-footer js-save">点击绑定</span>
+            </div>
+
+            <div class="dn" id="hasUserPhone">
+                <div class="tip">您要绑定的会员卡未绑定手机号无法验证，请核对会员卡是否为您需要绑定会员卡</div>
+                <div class="ipgrp i1">
+                    <label>手机号：</label>
+                    <input id="userPhone" type="text" readonly>
+                </div>
+                <div class="ipgrp">
+                    <input class="js-mac js-number" type="text" placeholder="请输入您的验证码" maxlength="6">
+                    <label class="conbtn js-vcode">验证码</label>
+                </div>
+                <span class="btn btn-footer js-save">点击绑定</span>                    
+            </div>
+
+            <div class="dn" id="unhave">
+            </div>
+
+            <div class="dialog dn">
+                <div class="tablecell">
+                    <div class="dialog-context no-txtidt">
+                        <div class="ttl">注意事项<span class="opctbig" id="dialogClose"><i class="i i-delete2"></i></span></div>
+                        <div class="txt">
+                            您当前绑定的会员卡由于注册时未提交手机号，无法认证该会员卡为您完全所有，经过门店员工帮助您验证会员卡情况，为您提供通过扫码绑定该会员卡，如您继续绑定该会员卡可能会存在以下问题：
+                            <br>
+                            1、如有其它用户提供更详实证明该会员卡所有权，国美管家有权利取消您绑定的该会员卡，并清除会员卡在您账户展示的与其关联的订单、资产、证件等相关信息；<br>
+                            2、国美管家取消您绑定该会员卡造成的全部损失，国美管家不承担任何责任；<br>
+                            3、国美管家仅提供该会员卡绑定及其相关信息展示服务，由于您绑定会员卡产生的其它相关问题，国美管家不承担相关责任；<br>
+                            4、国美管家仅展示您当前绑定的会员卡订单信息、会员卡基础信息，并提供基于订单相关的周边服务，会对会员卡用户信息进行加密显示，对于您绑定会员卡造成的其它损失，国美管家不承担相关责任；<br>
+                            5、绑定会员卡最终解释权归国美管家所有。
+                            <br>
+                            注：如您继续绑定该会员卡，国美管家默认您同意以上协议，并已了解相关权益与义务，如不同意以上协议，请关闭绑定流程，谢谢您的支持。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/accsm.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                var accSm = new AccSm({sel: '#accSm'});
+                accSm.init();
+            });
+        </script>
+    </body>
+</html>

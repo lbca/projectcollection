@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/> 
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="http://css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <style>
+            .i-bxhuishou {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/bxhuishou.png');      
+            }
+            .i-bxweixiu {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/bxweixiu.png');      
+            }
+            .i-dnhuishou {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/dnhuishou.png');      
+            }
+            .i-dshuishou {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/dshuishou.png');      
+            }
+            .i-dsweixiu {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/dsweixiu.png');      
+            }
+            .i-kthuishou {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/kthuishou.png');      
+            }
+            .i-ktweixiu {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/ktweixiu.png');      
+            }
+            .i-kuaishuyuyue {
+                width: .45rem;
+                height: .45rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/kuaishuyuyue.png');      
+            }
+            .i-qingxi {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/qingxi.png');      
+            }
+            .i-rsqweixiu {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/rsqweixiu.png');      
+            }
+            .i-sjhuishou {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/sjhuishou.png');      
+            }
+            .i-sjweixiu {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/sjweixiu.png');      
+            }
+            .i-xyjhuishou {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/xyjhuishou.png');      
+            }
+            .i-xyjweixiu {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/xyjweixiu.png');      
+            }
+            .i-yjweixiu {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/yjweixiu.png');      
+            }
+            .i-zjweixiu {
+                width: .35rem;
+                height: .35rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/zjweixiu.png');      
+            }
+            .i-fuwu {
+                width: .22rem;
+                height: .22rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/fuwu.png');      
+            }
+            .cur .i-fuwu {
+                background-image: url('//img.gomegj.com/guanjia/v1/fuwu1.png');      
+            }
+            .i-dingdan {
+                width: .22rem;
+                height: .22rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/dingdan.png');      
+            }
+            .cur .i-dingdan {
+                background-image: url('//img.gomegj.com/guanjia/v1/dingdan1.png');      
+            }
+            .i-wode {
+                width: .22rem;
+                height: .22rem;
+                background-image: url('//img.gomegj.com/guanjia/v1/wode.png');      
+            }
+            .cur .i-wode {
+                background-image: url('//img.gomegj.com/guanjia/v1/wode1.png');      
+            }
+            #index .container {
+                bottom: .5rem;
+            }
+            #index .nav-top .licon-rtext {
+                min-height: .65rem;
+                padding-top: .17rem;
+                padding-left: .55rem;
+                float: left;
+            }
+            #index .nav-top .licon-rtext-i {
+                width: .45rem;
+                height: .45rem;
+            }
+            #index .nav-top-a {
+                color: #333;
+                width: 50%;
+                float: left;
+            }
+            #index .list-labelvalue {
+                overflow: hidden;
+                margin-top: .1rem;
+                border-color: rgba(227, 227, 227, .4);
+                border-left: none;
+                border-right: none;
+            }
+            #index .list-labelvalue .li-i1 {
+                line-height: .39rem;
+            }
+            #index .list-labelvalue .li-i2 {
+                padding-top: .08rem;
+                padding-bottom: .1rem;
+            }
+            #index .list-labelvalue .li-div {
+                width: 50%;
+                float: left;
+            }
+            #index .list-labelvalue .licon-rtext {
+                color: #333;
+                text-align: left;
+                width: 1.12rem;
+                display: inline-block;
+            }
+            #index .list-labelvalue .licon-rtext-tip {
+                transform: scale(.8);
+                transform-origin: left;
+                -webkit-transform: scale(.8);
+                -webkit-transform-origin: left;
+            }
+            #index .footer {
+                background: url('//img.gomegj.com/guanjia/v1/blk30.png') repeat-x top;
+                overflow: hidden;
+            }
+            #index .footer-a {
+                text-align: center;
+                width: 33.3%;
+                float: left;
+            }
+        </style>
+    </head> 
+    <body id="index">
+    	<div class="header">
+            <!-- <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a> -->
+            <!-- 标题 -->
+            <span class="title">国美管家</span>
+        </div>
+        <div class="container">
+            <div class="oh">
+                <img class="full-img" src="http://img.gomegj.com/guanjia/v1/indexbanner.jpg" alt="">
+            </div>
+            <div class="nav-top blk1">
+                <a class="nav-top-a" href="/clean">
+                    <span class="licon-rtext">
+                        <i class="licon-rtext-i i i-cleaning"></i>
+                        <div class="licon-rtext-strong">清洗服务</div>
+                        <div class="licon-rtext-tip">清洗更加便捷</div>
+                    </span>
+                </a>
+                <a class="nav-top-a" href="/repair/quick">
+                    <span class="licon-rtext ml12">
+                        <i class="licon-rtext-i i i-kuaishuyuyue"></i>
+                        <div class="licon-rtext-strong">快速预约</div>
+                        <div class="licon-rtext-tip">预约更加方便</div>
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-labelvalue">
+                <li class="li-i1">维修服务</li>
+                <li class="li-i2">
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/repair?catId=12">
+                            <i class="licon-rtext-i i i-sjweixiu"></i>
+                            <div class="licon-rtext-strong">手机维修</div>
+                            <div class="licon-rtext-tip">能上门能邮寄</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/repair?catId=25">
+                            <i class="licon-rtext-i i i-bxweixiu"></i>
+                            <div class="licon-rtext-strong">冰箱维修</div>
+                            <div class="licon-rtext-tip">加氟除冰换件</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/repair?catId=19">
+                            <i class="licon-rtext-i i i-dsweixiu"></i>
+                            <div class="licon-rtext-strong">电视维修</div>
+                            <div class="licon-rtext-tip">换屏修板排线</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/repair?catId=21">
+                            <i class="licon-rtext-i i i-xyjweixiu"></i>
+                            <div class="licon-rtext-strong">洗衣机维修</div>
+                            <div class="licon-rtext-tip">配件原厂品质</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/repair?catId=26">
+                            <i class="licon-rtext-i i i-yjweixiu"></i>
+                            <div class="licon-rtext-strong">烟机维修</div>
+                            <div class="licon-rtext-tip">换件清洗排障</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/repair?catId=20">
+                            <i class="licon-rtext-i i i-ktweixiu"></i>
+                            <div class="licon-rtext-strong">空调维修</div>
+                            <div class="licon-rtext-tip">挂机柜机维修</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/repair?catId=27">
+                            <i class="licon-rtext-i i i-rsqweixiu"></i>
+                            <div class="licon-rtext-strong">热水器维修</div>
+                            <div class="licon-rtext-tip">换件换管换板</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/repair?catId=28">
+                            <i class="licon-rtext-i i i-zjweixiu"></i>
+                            <div class="licon-rtext-strong">灶具维修</div>
+                            <div class="licon-rtext-tip">排障换芯除垢</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="list-labelvalue">
+                <li class="li-i1">回收服务</li>
+                <li class="li-i2">
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/recycle?catId=12">
+                            <i class="licon-rtext-i i i-sjhuishou"></i>
+                            <div class="licon-rtext-strong">手机回收</div>
+                            <div class="licon-rtext-tip">实时精准估价</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/recycle?catId=25">
+                            <i class="licon-rtext-i i i-bxhuishou"></i>
+                            <div class="licon-rtext-strong">冰箱回收</div>
+                            <div class="licon-rtext-tip">上门检测回收</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/recycle?catId=19">
+                            <i class="licon-rtext-i i i-dshuishou"></i>
+                            <div class="licon-rtext-strong">电视回收</div>
+                            <div class="licon-rtext-tip">全品类上门收</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/recycle?catId=21">
+                            <i class="licon-rtext-i i i-xyjhuishou"></i>
+                            <div class="licon-rtext-strong">洗衣机回收</div>
+                            <div class="licon-rtext-tip">免收楼层费用</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/recycle?catId=20">
+                            <i class="licon-rtext-i i i-kthuishou"></i>
+                            <div class="licon-rtext-strong">空调回收</div>
+                            <div class="licon-rtext-tip">免拆免运免搬</div>
+                        </a>
+                    </div>
+                    <div class="li-div">
+                        <a class="licon-rtext" href="/recycle?catId=36">
+                            <i class="licon-rtext-i i i-dnhuishou"></i>
+                            <div class="licon-rtext-strong">电脑回收</div>
+                            <div class="licon-rtext-tip">信息安全处理</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <a class="footer-a cur" href="javascript:util.href('index.html');">
+                <span class="timg-btext">
+                    <i class="timg-btext-i i i-fuwu"></i>
+                    服务
+                </span>
+            </a>
+            <a class="footer-a" href="javascript:util.href('orders.html');">
+                <span class="timg-btext">
+                    <i class="timg-btext-i i i-dingdan"></i>
+                    订单
+                </span>
+            </a>
+            <a class="footer-a" href="javascript:util.href('set.html');">
+                <span class="timg-btext">
+                    <i class="timg-btext-i i i-wode"></i>
+                    我的
+                </span>
+            </a>
+        </div>
+
+       <!--  <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+       <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+       <script src="//js.gomegj.com/guanjia/v1/index.js?v=88888888"></script>
+       <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js?v=88888888"></script>
+       <script src="//js.gomegj.com/guanjia/v1/wx.config.js?v=88888888"></script>
+       <script>
+           $(document).ready(function() {
+               // 微信js
+               var wc = new WxConfig({
+                   cfg: {
+                       //'debug': true,
+                       'jsApiList': ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone']
+                   },
+                   // 验证成功
+                   ready: readyCbk,
+                   // 验证失败
+                   error: errorCbk
+               });
+               // 初始化
+               wc.init();
+               
+               // 
+               var index = new Index({sel: '#index'});
+               index.init();
+           });
+           /**
+            * 微信js验证成功回调
+            */
+           function readyCbk() {
+               // 分享标题
+               var title = '国美管家',
+                   // 分享链接
+                   link = window.location.href,
+                   // 分享描述
+                   desc = '足不出户享受上门维修、回收、清洗保养服务，贴心到家服务等您召唤。',
+                   // 分享图标
+                   imgUrl = 'http://img.gomegj.com/guanjia/v1/appiconfang.jpg';
+       
+               // 分享到朋友圈
+               wx.onMenuShareTimeline({
+                   title: title,
+                   link: link,
+                   imgUrl: imgUrl,
+                   success: successCbk,
+                   cancel: cancelCbk
+               });
+               // 分享给朋友
+               wx.onMenuShareAppMessage({
+                   title: title,
+                   desc: desc,
+                   link: link,
+                   imgUrl: imgUrl,
+                   success: successCbk,
+                   cancel: cancelCbk
+               });
+               // 分享到QQ
+               wx.onMenuShareQQ({
+                   title: title,
+                   desc: desc,
+                   link: link,
+                   imgUrl: imgUrl,
+                   success: successCbk,
+                   cancel: cancelCbk
+               });
+               // 分享到腾讯微博
+               wx.onMenuShareWeibo({
+                   title: title,
+                   desc: desc,
+                   link: link,
+                   imgUrl: imgUrl,
+                   success: successCbk,
+                   cancel: cancelCbk
+               });
+               // 分享到QQ空间
+               wx.onMenuShareQZone({
+                   title: title,
+                   desc: desc,
+                   link: link,
+                   imgUrl: imgUrl,
+                   success: successCbk,
+                   cancel: cancelCbk
+               });
+           }
+           /**
+            * 验证失败回调
+            */
+           function errorCbk() {
+               // 提示用户
+               /*util.alert('页面加载遇到问题，将重新尝试。', {
+                   justOk: false,
+                   defBtnIndex: 0,
+                   okFn: function() {
+                       // 重新加载页面
+                       window.location.reload();
+                   }
+               });*/
+           }
+           /**
+            * 分享成功回调
+            */
+           function successCbk() {
+               // nothing...
+           }
+           /**
+            * 取消分享回调
+            */
+           function cancelCbk() {
+               // nothing...
+           }
+       </script> -->
+    </body>
+</html>

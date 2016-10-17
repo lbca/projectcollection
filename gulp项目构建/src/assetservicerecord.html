@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/housekeeper.css?v=88888888" /> 
+    </head> 
+    <body id="assetServiceRecord">
+        <div class="header">
+            <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a>
+            <!-- 标题 -->
+            <span class="title">服务记录</span>
+        </div>
+        <div class="container">
+            <div class="dn" id="list">
+                <ul class="list-text icon">
+                    <li>
+                        <a id="asewcu" href="">
+                            <i class="text-icon i i-maintenance" disabled></i>
+                            <p>维修</p>
+                            <p class="text-smallgray">您更换了手机屏幕您更换了手机屏幕您更换了手机屏幕您更换了手机屏幕您。。。</p>
+                            <span class="txt-tprt">2015-10-8</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-text icon">
+                    <li>
+                        <a id="aspmu" href="">
+                            <i class="text-icon i i-cleaning" disabled></i>
+                            <p>清洗保养</p>
+                            <p class="text-smallgray">您给手机更换了手机膜您给手机更换了手机膜</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-text icon">
+                    <li>
+                        <a href="">
+                            <i class="text-icon i i-bao2" disabled></i>
+                            <p>延保</p>
+                            <p class="text-smallgray">您回收了手机您回收了手机您回收了手机您回收了手机您回收了手机您回收了手机</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tuwen">
+                <div class="tu">
+                    <i class="i i-order"></i>
+                </div>
+                <p class="wen">亲，您暂时还没有服务记录哦~</p>
+            </div>
+        </div>
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/assetservicerecord.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                var assetServiceRecord = new AssetServiceRecord({sel: '#assetServiceRecord'});
+                assetServiceRecord.init();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/orders.css?v=88888888" />
+    </head> 
+    <body id="ordersDetEty">
+        <div class="header">
+            <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a>
+            <!-- 标题 -->
+            <span class="title">订单详情</span>
+        </div>
+        <div class="container">
+
+            <ul class="list-line">
+                <li class="tip">
+                    <i class="i i-shop"></i><span class="fcffa tod" id="salesclerkInfo">-</span><span class="fr tod">共计<span id="productCount">0</span>件商品</span>
+                </li>
+                <li class="goods-show" id="list"></li>
+                <li class="center-text js-moregoods" id="openMoreGoods">
+                    <span class="center-text-btn">查看全部<i class="i i-gt"></i></span>
+                </li>
+                <li class="center-text js-moregoods dn" id="closeMoreGoods">
+                    <span class="center-text-btn">收起<i class="i i-lt"></i></span>
+                </li>
+            </ul>
+            <div class="bgcolor-f5-h10"></div>
+            <ul class="list-labelvalue">
+                <!-- <li>
+                    <label>订单状态</label>
+                    <i class="i i-gt"></i>
+                </li> -->
+                <li>
+                    <label>供货商家</label>
+                    <span class="value" id="spsr">国美电器</span>
+                </li>
+                <li>
+                    <div>
+                        <label>预约送货</label>
+                        <span class="value" id="atdvt">-</span>
+                    </div>
+                    <div class="dn">
+                        <label>预约安装</label>
+                        <span class="value" id="atitct">此功能暂未开通，敬请期待</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label>姓名</label>
+                        <span class="value" id="cname">-</span>
+                    </div>
+                    <div>
+                        <label>联系电话</label>
+                        <span class="value" id="cphone">-</span>
+                    </div>
+                    <div>
+                        <label>地址</label>
+                        <span class="value" id="faddr">-</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label>订单号</label>
+                        <span class="value" id="otn">-</span>
+                    </div>
+                    <div>
+                        <label>下单时间</label>
+                        <span class="value" id="sdodt">-</span>
+                    </div>
+                    <div>
+                        <label>配送方式</label>
+                        <span class="value" id="dtway">-</span>
+                    </div>
+                    <div>
+                        <label>发票信息</label>
+                        <span class="value" id="ivifm">未知</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label>商品总额</label>
+                        <span class="value" id="gtam">¥0.00</span>
+                    </div>
+                    <div>
+                        <label>+运费</label>
+                        <span class="value" id="frgt">¥0.00</span>
+                    </div>
+                </li>
+                <li class="oh">
+                    <div class="fr">
+                        <label class="txt-small">实付金额：</label>
+                        <span class="txt-red" id="actualMoney">¥0.00</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="footer">
+            实付费用：<span class="fcred">￥899</span> 
+            <span class="btn btn-linear">取消订单</span>
+            <span class="btn btn-linear">催单</span>
+        </div> -->
+        <script src="//js.gomegj.com/guanjia/v1/zepto-animate.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/orderscom.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/ordersdetety.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                var ordersComn = new OrdersCom({'cur': '实物单'}),
+                    ordersDetEty = new OrdersDetEty({'sel': '#ordersDetEty'});
+                // 加载...
+                ordersDetEty.init();
+            });
+        </script>
+    </body>
+</html>

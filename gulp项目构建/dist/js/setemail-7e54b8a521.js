@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+"use strict";var root=window||{},util=root.util||{},SetEmail=function(t){this.options=$.extend({sel:"",hrefParma:util.getHrefParma(),emailReg:/^.+@.+\..+$/i,msg:{m1:"请输入邮箱",m2:"请输入正确邮箱",m3:"邮箱已绑定其他账户，请重新输入"},requestState:{save:!0}},t),this.sel=this.options.sel,this.el=$(this.sel)};$.extend(SetEmail.prototype,{init:function(){var t=this;t.load(),t.addEvent()},load:function(){var t=this;t.options.hrefParma},_save:function(t){var e=this;util.api({surl:root.MB_API_PATH+"modudtal",data:{mod:2,email:t},type:"post",beforeSend:function(){e.options.requestState.save=!1},success:function(t){var i=t.rpco;switch(i){case 200:util.href("set.html");break;case 40016:util.alert(e.options.msg.m3);break;default:util.tip("保存失败")}},complete:function(){e.options.requestState.save=!0}})},save:function(){var t=this,e=$("#value").val()||"";return!!t.options.requestState.save&&(e?t.options.emailReg.test(e)?void t._save(e):(util.tip(t.options.msg.m2),!1):(util.tip(t.options.msg.m1),!1))},addEvent:function(){var t=this,e=util.getClick();t.options.hrefParma;t.el.on(e,"#save",function(){t.save()})}});

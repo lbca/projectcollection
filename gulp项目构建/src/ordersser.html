@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/orders.css?v=88888888" />
+    </head> 
+    <body>
+        <div class="header">
+            <!-- 标题 -->
+            <span class="title">我的订单</span>
+        </div>
+        <div class="container">
+            <!-- 导航 -->
+            <nav></nav>
+            <!-- debug -->
+            <div class="tuwen">
+                <div class="tu">
+                    <i class="i i-order"></i>
+                </div>
+                <p class="wen">亲，您还没有在平台生产过订单<br>让管家为您服务下呗~</p>
+            </div>
+
+        </div>
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/orderscom.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                var ordersCom = new OrdersCom({'cur': '服务单'});
+            });
+        </script>
+    </body>
+</html>

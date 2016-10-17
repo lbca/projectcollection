@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/housekeeper.css?v=88888888" /> 
+    </head> 
+    <body id="invite">
+        <div class="header">
+            <!-- <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a> -->
+            <!-- 标题 -->
+            <span class="title">我的分享</span>
+            <!-- <span class="btn" id="save">保存</span> -->
+        </div>
+        <div class="container">
+            <img class="bgimg" src="//img.gomegj.com/guanjia/v1/myshare.jpg">
+            <div class="content">
+                <ul class="chatitem">
+                    <li>
+                        <img class="userpic" id="hporturl" src="" alt="">
+                        <div class="chattxt">
+                            hi，我是<span id="nick">国美管家</span>，邀您关注国美管家，享受贴心家电管家服务。
+                        </div>
+                    </li>
+                </ul>
+                <div class="tip rdicblk"><span class="rdic">点击右上角分享<i class="i i-sharearrow"></i></span></div>
+                <div class="tip bgblk">专属分享页</div>
+                <div class="tip smgay">国美集团旗下，专注上门售后一站式服务平台</div>
+                <div class="img-blk">
+                    <img id="ewm" src="" alt="">
+                    <span class="zhiwen"></span>
+                </div>
+                <div class="tip smblk">长按指纹或扫描二维码关注</div>
+                <div class="footblk">
+                    <div class="tbnav">
+                        <dl>
+                            <dt><img src="//img.gomegj.com/guanjia/v1/maintenance.png" alt=""></dt>
+                            <dd>维修</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="//img.gomegj.com/guanjia/v1/cleaning.png" alt=""></dt>
+                            <dd>清洗</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="//img.gomegj.com/guanjia/v1/appointment.png" alt=""></dt>
+                            <dd>回收</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="//img.gomegj.com/guanjia/v1/orderinquiry.png" alt=""></dt>
+                            <dd>订单查询</dd>
+                        </dl>
+                    </div>
+                    <!-- <p class="tip tac">
+                        <a class="center-link" href="javascript:util.href('warranty.html');">常见问题</a>
+                        <a class="center-link" href="javascript:util.href('invitereadme.html');">常见问题</a>
+                    </p> -->
+                </div>
+            </div>
+        </div>
+        <!-- 公共配置 -->
+        <script>
+            // 不进行微信认证登录
+            window.NO_WXLOGIN = true;
+        </script>
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/invite.js?v=88888888"></script>
+        <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/wx.config.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                // 微信js
+                var wc = new WxConfig({
+                    cfg: {
+                        //'debug': true,
+                        'jsApiList': ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone']
+                    },
+                    // 验证成功
+                    ready: readyCbk,
+                    // 验证失败
+                    error: errorCbk
+                });
+                // 初始化
+                wc.init();
+                
+                //
+                var invite = new Invite({sel: '#invite'});
+                invite.init();
+            });
+            /**
+             * 微信js验证成功回调
+             */
+            function readyCbk() {
+                // 分享标题
+                var title = '国美管家',
+                    // 分享链接
+                    link = window.location.href,
+                    // 分享描述
+                    desc = '足不出户享受上门维修、回收、清洗保养服务，贴心到家服务等您召唤。',
+                    // 分享图标
+                    imgUrl = 'http://img.gomegj.com/guanjia/v1/appiconfang.jpg';
+
+                // 分享到朋友圈
+                wx.onMenuShareTimeline({
+                    title: title,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+                // 分享给朋友
+                wx.onMenuShareAppMessage({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+                // 分享到QQ
+                wx.onMenuShareQQ({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+                // 分享到腾讯微博
+                wx.onMenuShareWeibo({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+                // 分享到QQ空间
+                wx.onMenuShareQZone({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+            }
+            /**
+             * 验证失败回调
+             */
+            function errorCbk() {
+                // 提示用户
+                /*util.alert('页面加载遇到问题，将重新尝试。', {
+                    justOk: false,
+                    defBtnIndex: 0,
+                    okFn: function() {
+                        // 重新加载页面
+                        window.location.reload();
+                    }
+                });*/
+            }
+            /**
+             * 分享成功回调
+             */
+            function successCbk() {
+                // nothing...
+            }
+            /**
+             * 取消分享回调
+             */
+            function cancelCbk() {
+                // nothing...
+            }
+        </script>
+    </body>
+</html>

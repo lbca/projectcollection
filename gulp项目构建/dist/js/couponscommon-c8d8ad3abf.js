@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+"use strict";var root=window||{},util=root.util||{},CouponsCommon=function(t){this.options=$.extend({cur:"",navs:[{name:"未使用",href:"javascript:;",value:1},{name:"已过期",href:"javascript:;",value:2},{name:"已使用",href:"javascript:;",value:3}],convertNav:!1},t),this.sel=this.options.sel,this.el=$(this.sel),this.init()};$.extend(CouponsCommon.prototype,{init:function(){var t=this;t.renderNav(),t.addEvent()},renderNav:function(){for(var t=this,a=t.options.navs||[],n=t.options.cur,i="",s=0,e=a.length;s<e;s++)i+="<a "+(a[s].value===n?'class="cur" href="javascript:;"':'href="'+a[s].href+'"')+' value="'+a[s].value+'"><span>'+a[s].name+"</span></a>";$(".nav-tab:first").html(i)},addEvent:function(){var t=this,a=util.getClick();t.options.hrefParma;t.options.convertNav&&$(".nav-tab:first").find("> a").on(a,function(){$(".nav-tab:first").find(".cur").removeClass("cur"),$(this).addClass("cur")})}});

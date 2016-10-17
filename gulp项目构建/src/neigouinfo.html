@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/> 
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/neigouhui.css?v=88888888" />
+    </head>
+    <body class="neigouinfo">
+        <div class="header">
+            <a class="goBack" target="_self" href="javascript:util.href('index.html');" >&nbsp;<i class="i i-return"></i></a>
+            <span class="title">国美内购会</span>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <ul class="list-text icon">
+                    <li>
+                        <i class="text-icon i i-moneyyuangreen"></i>
+                        <p class="text-smallgray">入场券编码</p>
+                        <p class="text-blk js_tkseq">&nbsp;</p>
+                    </li>
+                </ul>
+                <img class="ctblk js_ewm">
+                <div class="tip tac" id="useRule">查看使用规则</div>
+            </div>
+            <div class="content content_i1">
+                <ul class="list-text icon">
+                    <li>
+                        <i class="text-icon i i-zjyellow"></i>
+                        <p class="text-smallgray">个人信息</p>
+                    </li>
+                </ul>
+                <ul class="lsttxt">
+                    <li class="lsttxt_txt tod">姓名：<span class="js_name"></span></li>
+                    <li class="lsttxt_txt tod">手机：<span class="js_phone"></span></li>
+                    <li class="lsttxt_txt tod">推荐人编号：<span class="js_sendPerson"></span></li>
+                    <li class="lsttxt_txt tod">所在地区：<span class="js_areaval"></span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dialog dn" id="dialog">
+            <div class="tablecell">
+                <div class="dialog-context no-txtidt">
+                    <div class="ttl">入场券使用规则<span class="opctbig" id="dialogClose"><i class="i i-delete2"></i></span></div>
+                    <div class="txt">国美管家保修卡信息仅作为帮助用户实时提醒保修剩余时间及相关发票、商品条码管理展示，不作为最终保修凭证，最终解释权归产品厂家所有。国美管家保修卡信息仅作为帮助用户实时提醒保修剩余时间及相关发票、商品条码管理展示，不作为最终保修凭证，最终解释权归产品厂家所有。国美管家保修卡信息仅作为帮助用户实时提醒保修剩余时间及相关发票、商品条码管理展示，不作为最终保修凭证，最终解释权归产品厂家所有。国美管家保修卡信息仅作为帮助用户实时提醒保修剩余时间及相关发票、商品条码管理展示，不作为最终保修凭证，最终解释权归产品厂家所有。 国美管家保修卡信息仅作为帮助。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/neigouinfo.js?v=88888888"></script>
+        <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/wx.config.js?v=88888888"></script>
+    	<script>
+            $(document).ready(function() {
+                // 微信js
+                var wc = new WxConfig({
+                    cfg: {
+                        //'debug': true,
+                        'jsApiList': ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone']
+                    },
+                    // 验证成功
+                    ready: readyCbk,
+                    // 验证失败
+                    error: errorCbk
+                });
+                // 初始化
+                wc.init();
+                
+                //
+                var neiGouInfo = new NeiGouInfo({ sel: '.neigouinfo' });
+                neiGouInfo.init();
+            });
+            /**
+             * 微信js验证成功回调
+             */
+            function readyCbk() {
+                // 分享标题
+                var title = '国美管家',
+                    // 分享链接
+                    link = window.location.href,
+                    // 分享描述
+                    desc = '足不出户享受上门维修、回收、清洗保养服务，贴心到家服务等您召唤。',
+                    // 分享图标
+                    imgUrl = 'http://img.gomegj.com/guanjia/v1/appiconfang.jpg';
+
+                // 分享到朋友圈
+                wx.onMenuShareTimeline({
+                    title: title,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+                // 分享给朋友
+                wx.onMenuShareAppMessage({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+                // 分享到QQ
+                wx.onMenuShareQQ({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+                // 分享到腾讯微博
+                wx.onMenuShareWeibo({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+                // 分享到QQ空间
+                wx.onMenuShareQZone({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: successCbk,
+                    cancel: cancelCbk
+                });
+            }
+            /**
+             * 验证失败回调
+             */
+            function errorCbk() {
+                // 提示用户
+                /*util.alert('页面加载遇到问题，将重新尝试。', {
+                    justOk: false,
+                    defBtnIndex: 0,
+                    okFn: function() {
+                        // 重新加载页面
+                        window.location.reload();
+                    }
+                });*/
+            }
+            /**
+             * 分享成功回调
+             */
+            function successCbk() {
+                // nothing...
+            }
+            /**
+             * 取消分享回调
+             */
+            function cancelCbk() {
+                // nothing...
+            }
+    	</script>
+    </body>
+</html>

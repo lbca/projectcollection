@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/housekeeper.css?v=88888888" /> 
+    </head> 
+    <body id="accInput">
+        <div class="header">
+            <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a>
+            <!-- 标题 -->
+            <span class="title">账户绑定</span>
+        </div>
+        <div class="container">
+            <ul class="list-labelvalue">
+                <li>
+                    <label>来源</label>
+                    <span class="value" id="actype"></span>
+                </li>
+            </ul>
+            <ul class="list-labelvalue">
+                <li>
+                    <label>会员卡</label>
+                    <input class="maxwidth" id="acnum" type="text" placeholder="请输入会员卡号" maxlength="32">
+                </li>
+                <li>
+                    <label>验证码</label>
+                    <span class="btn btn-linear" id="sendCode">验证码</span>
+                    <input class="js-number" id="vcode" type="text" placeholder="请输入短信验证码" maxlength="6">
+                </li>
+            </ul>
+            <p class="tip dn" id="sendTip">已将短信发送给您<span id="mobile"></span>的手机上。</p>
+            <div class="link-block">
+                <i class="i i-quangou"></i>
+                <a class="fl" id="cardBindRule" href="javascript:;">会员卡绑定规则</a>
+                <a class="fr" id="accsearch" href="javascript:;">手机号查询会员卡</a>
+            </div>
+            <span class="btn btn-footer js-entersave" id="save">绑定</span>
+        </div>
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/accinput.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                var accInput = new AccInput({sel: '#accInput'});
+                accInput.init();
+            });
+        </script>
+    </body>
+</html>

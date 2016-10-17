@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/>
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/housekeeper.css?v=88888888" /> 
+    </head> 
+    <body id="setPwdmod">
+        <div class="header">
+            <a class="goBack" target="_self">&nbsp;<i class="i i-return"></i></a>
+            <!-- 标题 -->
+            <span class="title">设置密码</span>
+            <span class="btn js-entersave" id="save">保存</span>
+        </div>
+        <div class="container">
+            <!-- 设置密码 -->
+            <ul class="list-labelvalue">
+                <li class="i1">
+                    <label>原始密码：</label>
+                    <input id="oPwd" type="password" placeholder="请输入6~18个字符" maxlength="18">
+                </li>
+                <li class="i2">
+                    <label>输入密码：</label>
+                    <input id="nPwd" type="password" placeholder="请输入6~18个字符" maxlength="18">
+                </li>
+                <li class="i3">
+                    <label>确认密码：</label>
+                    <input id="cfmNPwd" type="password" placeholder="再次输入新密码" maxlength="18">
+                </li>
+                <li class="i4">
+                    <label>验证码：</label>
+                    <input class="js-number" id="vcode" type="text" placeholder="请输入验证码" maxlength="18">
+                    <img id="vimg" src="" alt="">
+                </li>
+            </ul>
+            <p class="tip fs10">您的密码将被用作登录国美管家APP使用，请妥善保存。</p>
+        </div>
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/setpwdmod.js?v=88888888"></script>
+        <script>
+            $(document).ready(function() {
+                var setPwdmod = new SetPwdmod({sel: '#setPwdmod'});
+                setPwdmod.init();
+            });
+        </script>
+    </body>
+</html>

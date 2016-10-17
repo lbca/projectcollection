@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+"use strict";var root=window||{},util=root.util||{},NeiGouCity=function(t){this.options=$.extend({sel:"",hrefParma:util.getHrefParma()},t),this.sel=this.options.sel,this.el=$(this.sel)};$.extend(NeiGouCity.prototype,{init:function(){var t=this;t.load(),t.addEvent()},load:function(){var t=this,i=t.options.hrefParma,e=i.p||"";t.getCity(e)},renderItem:function(t){var i="";t=t||[];for(var e=0,o=t.length;e<o;e++)i+='<li val="'+t[e].C+'">'+t[e].N+"</li>";$("#list").html(i)},getCity:function(t){var i=this;util.api({surl:root.PVC_API_PATH+t+".json",type:"get",beforeSend:function(){util.comShow({txt:"正在努力加载中…",icl:"i-load ro360"})},success:function(t){i.renderItem(t.cld)},complete:function(){util.remComShow()}})},addEvent:function(){var t=this,i=util.getClick(),e=t.options.hrefParma;t.el.on(i,"#list li",function(){var t=$(this).attr("val")||"",i=($(this).text()||"",{c:t,cbu:e.cbu});e.gname&&(i.gname=e.gname),e.mob&&(i.mob=e.mob),e.refid&&(i.refid=e.refid),e.foi&&(i.foi=e.foi),e.b&&(i.b=e.b),util.href("neigoudistrict.html",i)})}});

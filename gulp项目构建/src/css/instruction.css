@@ -1,0 +1,186 @@
+body {
+    position: relative;
+}
+
+#instruction {
+    background-color: #fff;
+}
+
+#instruction .header {
+    height: .42rem;
+}
+
+#instruction .header span {
+    display: inline-block;
+    height: .42rem;
+}
+
+#instruction .header .title {
+    width: 2rem;
+    overflow: hidden;
+}
+
+#instruction span.mainCatalog {
+    width: .6rem;
+    height: 100%;
+    background: url(//img.gomegj.com/guanjia/v1/mulu.png) no-repeat center center;
+    background-size: 40%;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#instruction .container {
+    /* padding-bottom: .53rem; */
+    background-color: #fff;
+}
+#instruction .container.hsft {
+    bottom: .5rem;
+}
+#instruction .catalog {
+    position: relative;
+    background-color: #fff;
+    padding-left: .12rem;
+    padding-right: .12rem;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#instruction .catalog:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#instruction .container .padding-big {
+    padding-left: .32rem;
+}
+
+#instruction .container .padding-small {
+    padding-left: .12rem;
+}
+
+#instruction .content {
+    margin-bottom: .1rem;
+    padding: 0 .17rem;
+    padding-top: .1rem;
+    background-color: #fff;
+    font-size: .15rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#instruction .restore {
+    max-height: .675rem;
+}
+
+#instruction .menu {
+    background-color: #fff;
+    text-align: center;
+    padding-top: .05rem;
+    padding-left: .12rem;
+    padding-right: .12rem;
+    line-height: 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#instruction #menu {
+    display: inline-block;
+    width: .4rem;
+    height: .16rem;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    position: relative;
+    z-index: 0;
+}
+
+#menu:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: .8rem;
+    height: .32rem;
+    bottom: 0;
+    left: -50%;
+
+}
+
+#instruction .menu span {
+    background-image: url(//img.gomegj.com/guanjia/v1/arrow-down.png);
+}
+
+#instruction .menu .bg-img {
+    background-image: url(//img.gomegj.com/guanjia/v1/arrow-up.png);
+}
+
+#instruction .footer {
+    position: absolute;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    line-height: .48rem;
+    background-color: #3b3b3b;
+    text-align: center;
+}
+
+#instruction .footer .btn-linear {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: .48rem;
+    border: none;
+    color: #ffae00;
+}
+
+#instruction #prev,
+#instruction #next {
+    width: .42rem;
+    height: .5rem;
+    padding: 0;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+#instruction #prev {
+    background-image: url(//img.gomegj.com/guanjia/v1/instruc-left.png);
+
+}
+
+#instruction #next {
+    background-image: url(//img.gomegj.com/guanjia/v1/instruc-right.png);
+
+}
+
+#instruction .show {
+    display: inline-block;
+}
+
+#instruction .container .click-tip {
+    line-height: .45rem;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#instruction .container .click-tip:last-child {
+    border-bottom: none;
+}
+
+#instruction .container .img-alt,
+#instruction .container .table-alt {
+    /*font-size: .12rem;*/
+    color: #666;
+}
+
+#instruction .container .disable {
+    display: none;
+}
+
+#instruction .container .able {
+    display: block;
+}
+
+

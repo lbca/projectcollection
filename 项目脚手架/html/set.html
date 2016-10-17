@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+        <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+        <meta content="telephone=no" name="format-detection" /> 
+        <meta content="email=no" name="format-detection" /> 
+        <title>国美管家</title>
+        <link rel="dns-prefetch" href="//js.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//css.gomegj.com/"/>
+        <link rel="dns-prefetch" href="//img.gomegj.com/"/> 
+        <!-- 图标 -->
+        <link rel="shortcut icon" type="image/x-icon" href="//img.gomegj.com/guanjia/v1/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="//img.gomegj.com/guanjia/v1/appicon.png" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/base.css?v=88888888" />
+        <link rel="stylesheet" href="//css.gomegj.com/guanjia/v1/housekeeper.css?v=88888888" /> 
+    </head>
+    <body id="set" cge>
+        <div class="header">
+            <a class="goBack" target="_self" href="javascript:util.href('index.html');" >&nbsp;<i class="i i-return"></i></a>
+            <span class="title">设置</span>
+        </div>
+        <div class="container">
+            <ul class="list-labelvalue" >
+                <li class="i1" id="headPort">
+                    <label>头像</label>
+                    <img class="userpic js-dlgimg" src="//img.gomegj.com/guanjia/v1/defpoi.png" alt="">
+                    <i class="i i-gt"></i>
+                </li>
+                <li id="nickName">
+                    <label>昵称</label>
+                    <span class="value"></span>
+                    <i class="i i-gt"></i>
+                </li>
+                <li id="sex">
+                    <label>性别</label>
+                    <span class="value"></span>
+                    <i class="i i-gt"></i>
+                </li>
+                <li id="signature">
+                    <label>签名</label>
+                    <span class="value maxlength"></span>
+                    <i class="i i-gt"></i>
+                </li>
+            </ul>
+            <ul class="list-labelvalue" >
+                <li id="kahaobd">
+                    <label>卡号绑定</label>
+                    <i class="i i-gt"></i>
+                </li>
+                <li id="meiFuNum">
+                    <label>美服号</label>
+                    <span class="value">未设置</span>
+                    <i class="i i-gt"></i>
+                </li>
+                <li id="changePwd" nocge>
+                    <label>密码变更</label>
+                    <i class="i i-gt"></i>
+                </li>
+                <li id="phoneNum">
+                    <label>手机号<i class="i i-lock"></i></label>
+                    <span class="value"></span>
+                    <i class="i i-gt"></i>
+                </li>
+                <li id="email">
+                    <label>邮箱<i class="i i-lock"></i></label>
+                    <span class="value"></span>
+                    <i class="i i-gt"></i>
+                </li>
+            </ul>
+            <ul class="list-labelvalue" >
+                <li id="address">
+                    <label>常用地址</label>
+                    <span class="value"></span>
+                    <i class="i i-gt"></i>
+                </li>
+                <li id="certifi">
+                    <label>证件<i class="i i-lock"></i></label>
+                    <i class="i i-gt"></i>
+                </li>
+                <li id="area">
+                    <label>地区</label>
+                    <span class="value maxlength"></span>
+                    <i class="i i-gt"></i>
+                </li>
+            </ul>
+            <ul class="list-labelvalue" >
+                <li id="myshare">
+                    <label>我的邀请</label>
+                    <span class="value">邀请好友关注</span>
+                    <i class="i i-gt"></i>
+                </li>
+            </ul>
+            <p class="tip">
+                <i class="i i-lock"></i>图标所在项将用于您找回账号密码，请及时绑定。
+            </p>
+        </div>
+
+        <script src="//js.gomegj.com/guanjia/v1/zepto.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/util.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/set.js?v=88888888"></script>
+        <script src="//js.gomegj.com/guanjia/v1/iscroll-zoom.js?v=88888888"></script>
+    	<script>
+            //
+    		$(document).ready(function() {
+                var set = new Set({ sel: '#set' });
+                set.init();
+            });
+    	</script>
+    </body>
+</html>

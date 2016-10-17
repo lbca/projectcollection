@@ -1,0 +1,5 @@
+/**
+ * yidao
+ * created by 用车前端组
+ */
+"use strict";var root=window||{},util=root.util||{},AccListWait=function(t){this.options=$.extend({sel:"",hrefParma:util.getHrefParma()},t),this.sel=this.options.sel,this.el=$(this.sel)};$.extend(AccListWait.prototype,{init:function(){var t=this;t.load(),t.addEvent()},load:function(){var t=this,i=t.options.hrefParma,a={actype:i.actype,acphone:i.acphone,uiqcd:i.uiqcd};t.getAcclist(a)},renderAccountList:function(t){var t=t||[],i="";$.each(t,function(t,a){i+='<li val="'+a.acnum+'" acrdm="'+a.acrdm+'">'+a.acnum+"</li>"}),i&&$("#list").html(i).show()},getAcclist:function(t){var i=this;util.api({surl:root.MB_API_PATH+"unacclist",data:t,type:"get",success:function(t){var a,c=t.rpco;switch(c){case 200:a=t.body||{},i.renderAccountList(a.aclist);break;case 404:$("#noList").show();break;default:util.tip("查询失败")}}})},addEvent:function(){var t=this,i=util.getClick(),a=t.options.hrefParma;t.el.on(i,".container li",function(){var t={actype:a.actype,acphone:a.acphone,acnum:$(this).attr("val"),acrdm:$(this).attr("acrdm")};a.cbu&&util.href(a.cbu,t)})}});
