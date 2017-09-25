@@ -63,7 +63,7 @@ var CountDown = function(opt) {
     _nowTime: nowTime,
     // 完成所有倒计时
     _completeAll: false,
-    // 倒计时集合临时对象，格式如下：{ endTime: 0, el: node, complete: false}
+    // 倒计时集合临时对象
     _countDownListTEMP: [],
     // 同步服务器时间，间隔时长，默认：20s
     _syncSysTimeSpeed: 1000 * 20,
