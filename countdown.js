@@ -170,16 +170,13 @@ $.extend(CountDown.prototype, {
    */
   countDownHandle: function() {
     var that = this,
-        opt = that.opt,
-        countDownList = opt.countDownList
+        opt = that.opt
     // 
-    countDownList.forEach(function(n, i) {
+    opt.countDownList.forEach(function(n, i) {
       // 倒计时临时对象
       var countDownTEMP = opt._countDownListTEMP[i],
           // 当前时间
           now = new Date(opt._nowTime),
-          //
-          year, month, day, hour, minute, second,
           //
           timeSurplus,
           // 比较时间结果
@@ -192,6 +189,7 @@ $.extend(CountDown.prototype, {
         // 
         countDownTEMP = {
           el: DOC.querySelector(n.sel),
+          // 
           complete: false,
           // 无限
           infinite: n.endTime.search(/x/i) > -1 ? true : false
@@ -201,28 +199,26 @@ $.extend(CountDown.prototype, {
         // 放入临时集合
         opt._countDownListTEMP.push(countDownTEMP)
       }
+
       // 
       if(countDownTEMP.complete === true) { return true }
 
       // 比较时间
       comparisonTimeResult = that.comparisonTime(countDownTEMP, now)
 
-      // 结束，结束时间-当前时间，小于等于0，则已经结束
-      if(comparisonTimeResult <= 0) {
+      // 结束，差值等于零 || （差值小于零 && 没有执行过）
+      if(comparisonTimeResult === 0 || (comparisonTimeResult < 0 && !countDownTEMP.hasExecuted)) {
         // 
-        if(comparisonTimeResult === 0 || !countDownTEMP.hasExecuted) {
-          // 
-          countDownTEMP.infinite || (countDownTEMP.complete = true)
-          // 更新全局complete
-          that.setGlobalComplete()
-          // 设置“已执行”
-          countDownTEMP.hasExecuted = true
-          //
-          n.callback && n.callback()
-        } 
+        countDownTEMP.infinite || (countDownTEMP.complete = true)
+        // 更新全局complete
+        that.setGlobalComplete()
+        // 设置“已执行”
+        countDownTEMP.hasExecuted = true
+        //
+        n.callback && n.callback()
       }
       // 未结束 
-      else {
+      else if(comparisonTimeResult > 0) {
         // 计算剩余时间
         timeSurplus = that.computeEndTime(n.endTime) - opt._nowTime
 
